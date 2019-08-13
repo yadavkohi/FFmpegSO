@@ -46,6 +46,15 @@ public class FFmpeg implements FFmpegInterface {
                 Log.i("Loading FFmpeg for armv7 CPU");
                 cpuArchNameFromAssets = "armeabi-v7a";
                 break;
+            case ARMv8:
+                Log.i("Loading FFmpeg for arm64-v8a CPU");
+                cpuArchNameFromAssets = "arm64-v8a";
+                break;
+
+            case x86_64:
+                Log.i("Loading FFmpeg for x86_64 CPU");
+                cpuArchNameFromAssets = "x86_64";
+                break;
             case NONE:
                 throw new FFmpegNotSupportedException("Device not supported");
         }
